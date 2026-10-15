@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f766e">
+<title>کاتالوگ آموزشی توحید</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap">
+<style>
+/* Layout: header band with search, content cards stacked in one column, five-item bottom navigation. */
+:root{
+  --bg:#f3f7f6; --card:#ffffff; --ink:#12292b; --muted:#5b7174; --line:#dde8e6;
+  --brand:#0f766e; --brand-ink:#ffffff; --soft:#e2f2ef; --now:#fff4d6; --now-ink:#85560a;
+  --brand2:#0a5a54; --shadow:0 1px 2px rgba(15,60,56,.06),0 10px 20px -12px rgba(15,60,56,.22);
+  --font:Vazirmatn,"Noto Sans Arabic","Segoe UI",Tahoma,Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d1718; --card:#152528; --ink:#e5f0ef; --muted:#92a8aa; --line:#25383b;
+    --brand:#2dd4bf; --brand-ink:#06221f; --soft:#173b3a; --now:#3a2e0d; --now-ink:#fbbf24; --brand2:#14b8a6; --shadow:none; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d1718; --card:#152528; --ink:#e5f0ef; --muted:#92a8aa; --line:#25383b;
+  --brand:#2dd4bf; --brand-ink:#06221f; --soft:#173b3a; --now:#3a2e0d; --now-ink:#fbbf24; --brand2:#14b8a6; --shadow:none; color-scheme:dark;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{direction:rtl;margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15.5px;line-height:1.8}
+body{padding-bottom:84px}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+.wrap{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+header{position:relative;overflow:hidden;background:linear-gradient(150deg,var(--brand) 0%,var(--brand2) 100%);color:var(--brand-ink);padding-top:20px;padding-bottom:22px;border-radius:0 0 28px 28px}
+header::before{content:"";position:absolute;left:-60px;top:-70px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.10)}
+header::after{content:"";position:absolute;left:70px;bottom:-90px;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.07)}
+header .wrap{position:relative;z-index:1}
+.hd{display:flex;gap:12px;align-items:center}
+.mark{flex:0 0 40px;height:40px;border-radius:13px;background:rgba(255,255,255,.18);display:grid;place-items:center}
+.mark svg{stroke-width:2.2}
+header h1{margin:0;font-size:18.5px;line-height:1.5;font-weight:800}
+header p{margin:0;font-size:12.5px;opacity:.88}
+.search{position:relative;margin-top:14px}
+.search .si{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);display:flex}
+.search input{width:100%;border:0;border-radius:14px;padding:12px 44px 12px 14px;font:inherit;font-size:14.5px;background:var(--card);color:var(--ink);outline:none}
+.search input:focus-visible{outline:2px solid var(--brand-ink);outline-offset:1px}
+
+h2{font-size:15px;margin:20px 0 8px;font-weight:800}
+.note{background:var(--now);color:var(--now-ink);border-radius:14px;padding:10px 14px;font-size:13.5px;margin-top:14px}
+.chip{display:inline-block;background:var(--soft);color:var(--brand);border-radius:999px;padding:0 10px;font-size:12px;font-weight:600}
+.none{color:var(--muted);font-size:13.5px}
+
+.ico{flex:0 0 34px;height:34px;border-radius:11px;background:var(--soft);color:var(--brand);display:grid;place-items:center}
+.ico.s{flex-basis:30px;height:30px;border-radius:10px}
+.ico.big{flex-basis:42px;height:42px;border-radius:14px}
+
+.blk{background:var(--card);border:1px solid var(--line);border-radius:20px;margin-top:12px;overflow:hidden;box-shadow:var(--shadow)}
+.bh{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--line)}
+.bh h3{margin:0;font-size:15px;font-weight:800}
+.bb{padding:6px 14px 12px}
+.tr{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.tr:last-child{border-bottom:0}
+.tm{color:var(--brand);font-weight:700;font-size:13px;padding-top:1px}
+.lb{color:var(--muted);font-size:12.5px;line-height:1.6}
+.vl{font-weight:600;font-size:14.5px}
+.nm{display:inline-block;background:var(--soft);border-radius:999px;padding:0 11px;margin:3px 0 3px 6px;font-size:13.5px;font-weight:500}
+.sp{color:var(--muted);font-size:12px;margin-left:8px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:4px}
+.cell{background:var(--bg);border-radius:12px;padding:7px 11px;min-width:0}
+.cell .vl{font-size:14px}
+.sr{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px dashed var(--line)}
+.sr:last-child{border-bottom:0}
+.btnrow{display:flex;justify-content:flex-start;padding-top:6px}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-ink);border-radius:12px;padding:7px 16px;font-size:14px;text-decoration:none;border:0}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:14px 12px;text-decoration:none;display:flex;flex-direction:column;gap:8px;min-height:116px}
+.tile:active{transform:scale(.98)}
+.tile b{font-size:15px;line-height:1.5}
+.tile small{color:var(--muted);font-size:12.5px;line-height:1.5}
+
+.pills,.tabs{display:flex;gap:8px;overflow-x:auto;padding:14px 0 2px;scrollbar-width:none}
+.pills::-webkit-scrollbar,.tabs::-webkit-scrollbar{display:none}
+.pill,.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 15px;font-size:14px;text-decoration:none}
+.pill.on,.tab.on{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.tab.today::after{content:" ●";font-size:9px}
+.tabs{padding-top:4px}
+
+.stp{display:flex;align-items:center;gap:10px;margin-top:16px}
+.sb{flex:0 0 44px;height:44px;border-radius:14px;border:1px solid var(--line);background:var(--card);display:grid;place-items:center;color:var(--brand)}
+.sl{flex:1;text-align:center;line-height:1.5}
+.sl b{display:block;font-size:15px}
+.tdy{border:0;background:transparent;color:var(--brand);font-size:13px;text-decoration:underline;padding:0}
+
+.ln{display:grid;grid-template-columns:84px 70px 1fr;gap:6px;align-items:center;padding:8px 14px;border-bottom:1px solid var(--line);font-size:14px}
+.ln:last-child{border-bottom:0}
+.ln.now{background:var(--now)}
+.ln .dt{font-weight:700}
+.ln .wk{color:var(--muted);font-size:12.5px}
+.flt{width:100%;margin-top:14px;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font:inherit;font-size:14.5px;background:var(--card);color:var(--ink)}
+.rg{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:11px 14px;border-bottom:1px solid var(--line)}
+.rg:last-child{border-bottom:0}
+.rg.now{background:var(--now)}
+.rg .vl{font-size:14px}
+
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-top:12px;overflow:hidden}
+summary{padding:12px 14px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"⌄";color:var(--muted)}
+details[open] summary::after{content:"⌃"}
+.tw{overflow-x:auto;border-top:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:12.8px;min-width:640px}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{color:var(--muted);font-weight:600;background:var(--card)}
+th:first-child,td:first-child{position:sticky;right:0;background:var(--card);font-weight:700;border-left:1px solid var(--line)}
+tr.now td{background:var(--now)}
+.rule{display:flex;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.rule:last-child{border-bottom:0}
+.rule .no{flex:0 0 26px;height:26px;border-radius:50%;background:var(--soft);color:var(--brand);display:grid;place-items:center;font-size:13px;font-weight:700}
+.meta td{white-space:normal}
+.res .bb{padding-top:4px}
+.wh{color:var(--muted);font-size:13px}
+.empty{color:var(--muted);text-align:center;padding:30px 0}
+footer{margin:26px 0 8px;text-align:center;color:var(--muted);font-size:12.5px}
+
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:0 env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px);z-index:5}
+nav .in{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+nav a{text-decoration:none;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:1px;padding:8px 0 6px;font-size:11.5px}
+nav a.on{color:var(--brand);font-weight:700}
+@media (prefers-reduced-motion: reduce){.tile:active{transform:none}}
+
+.dchip{display:inline-flex;align-items:center;gap:6px;margin-top:12px;background:rgba(255,255,255,.16);border-radius:999px;padding:2px 12px 2px 10px;font-size:12.5px;font-weight:600}
+nav .ni{display:grid;place-items:center;padding:2px 18px;border-radius:999px}
+nav a.on .ni{background:var(--soft)}
+.ph{display:flex;gap:12px;align-items:center;margin-top:18px}
+.ph h2{margin:0;font-size:17px}
+.ph p{margin:0;color:var(--muted);font-size:13px}
+.body{padding:0 14px 14px}
+.body p{margin:0 0 8px}
+.meta{min-width:0;font-size:14px}
+.meta td{white-space:normal;vertical-align:top;border-top:1px solid var(--line);border-bottom:0}
+.meta td:first-child{position:static;background:transparent;border-left:0;color:var(--muted);width:34%;font-weight:400}
+a.res{display:block;text-decoration:none}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="hd"><span class="mark"></span><div><h1 id="ttl"></h1><p id="sub"></p></div></div>
+  <div class="dchip" id="dchip"></div>
+  <div class="search" id="searchBox"><span class="si"></span>
+    <input id="q" type="search" placeholder="جست‌وجوی نام استاد یا رزیدنت…" autocomplete="off" aria-label="جست‌وجو"></div>
+</div></header>
+<main class="wrap" id="app"></main>
+<nav><div class="in" id="nav"></div></nav>
+<script>
+document.documentElement.lang="fa";document.documentElement.dir="rtl";
+var CONFIG={
+  title:"معاونت آموزشی بیمارستان توحید",
+  subtitle:"راهنمای اکسترن‌ها و اینترن‌ها · گروه آموزشی داخلی",
+  author:"ادیب خضری — مسئول آموزش بیمارستان توحید",
+  /* بخش‌های تازه: برای افزودن، یک مورد به این فهرست اضافه کنید. مثال:
+     {id:"library", icon:"library", title:"کتابخانه", desc:"ساعت کار و امانت",
+      items:[{t:"ساعت کار", d:"توضیح کوتاه", meta:[["ساعت","..."]], link:{text:"دانلود فرم", url:"files/form.pdf"}}]}
+     آیکن‌های آماده: library form users phone pin file bell clock star */
+  pages:[]
+};
+var DATA={"y":1405,"m":7,"days":[{"d":1,"w":"چهارشنبه"},{"d":2,"w":"پنجشنبه"},{"d":3,"w":"جمعه"},{"d":4,"w":"شنبه"},{"d":5,"w":"یکشنبه"},{"d":6,"w":"دوشنبه"},{"d":7,"w":"سه‌شنبه"},{"d":8,"w":"چهارشنبه"},{"d":9,"w":"پنجشنبه"},{"d":10,"w":"جمعه"},{"d":11,"w":"شنبه"},{"d":12,"w":"یکشنبه"},{"d":13,"w":"دوشنبه"},{"d":14,"w":"سه‌شنبه"},{"d":15,"w":"چهارشنبه"},{"d":16,"w":"پنجشنبه"},{"d":17,"w":"جمعه"},{"d":18,"w":"شنبه"},{"d":19,"w":"یکشنبه"},{"d":20,"w":"دوشنبه"},{"d":21,"w":"سه‌شنبه"},{"d":22,"w":"چهارشنبه"},{"d":23,"w":"پنجشنبه"},{"d":24,"w":"جمعه"},{"d":25,"w":"شنبه"},{"d":26,"w":"یکشنبه"},{"d":27,"w":"دوشنبه"},{"d":28,"w":"سه‌شنبه"},{"d":29,"w":"چهارشنبه"},{"d":30,"w":"پنجشنبه"}],"oncall":{"specs":["روماتولوژی","غدد","انکولوژی","ریه","نفرولوژی","گوارش","داخلی","مسمومیت"],"rows":[["دکتر معتمدی","دکتر ساعد","دکتر قادری","دکتر حسنی","دکتر محمدی","دکتر نقشبندی","دکتر جدید الاسلام","دکتر مولانایی"],["دکتر معتمدی","دکتر ساعد","دکتر قادری","دکتر حسنی","دکتر محمدی","دکتر نقشبندی","دکتر شیخ الاسلامی","دکتر مولانایی"],["دکتر معتمدی","دکتر ساعد","دکتر قادری","دکتر حسنی","دکتر محمدی","دکتر نقشبندی","دکتر جدید الاسلام","دکتر مولانایی"],["دکتر مقیمی","دکتر ساعد","دکتر قادری","دکتر سیگاری","دکتر محمدی","دکتر نقشبندی","دکتر شیخ الاسلامی","دکتر مولانایی"],["دکتر مقیمی","دکتر ساعد","دکتر قادری","دکتر فتحی زاده","دکتر محمدی","دکتر خدایی","دکتر جدید الاسلام","دکتر مولانایی"],["دکتر مقیمی","دکتر ساعد","دکتر قادری","دکتر فتحی زاده","دکتر محمدی","دکتر خدایی","دکتر معمار","دکتر مولانایی"],["دکتر فرشادی","دکتر ساعدی","دکتر نصیری فر","دکتر فتحی زاده","دکتر محمدی","دکتر خدایی","دکتر شیخ الاسلامی","دکتر مولانایی"],["دکتر شیخ احمدی","دکتر ساعدی","دکتر نصیری فر","دکتر فتحی زاده","دکتر فرقانی","دکتر خدایی","دکتر جدید الاسلام","دکتر مولانایی"],["دکتر شیخ احمدی","دکتر محمدی","دکتر نصیری فر","دکتر فتحی زاده","دکتر فرقانی","دکتر خدایی","دکتر شیخ الاسلامی","دکتر یوسفی نژاد"],["دکتر شیخ احمدی","دکتر محمدی","دکتر نصیری فر","دکتر فتحی زاده","دکتر فرقانی","دکتر خدایی","دکتر شیخ الاسلام","دکتر یوسفی نژاد"],["دکتر مقیمی","دکتر محمدی","دکتر نصیری فر","دکتر فتحی زاده","دکتر فرقانی","دکتر خدایی","دکتر معمار","دکتر یوسفی نژاد"],["دکتر مقیمی","دکتر محمدی","دکتر نصیری فر","دکتر رضایی","دکتر فرقانی","دکتر خدایی","دکتر جدید الاسلام","دکتر یوسفی نژاد"],["دکتر مقیمی","دکتر محمدی","دکتر نصیری فر","دکتر رضایی","دکتر فرقانی","دکتر مقبل","دکتر معمار","دکتر یوسفی نژاد"],["دکتر فرشادی","دکتر محمدی","دکتر نصیری فر","دکتر رضایی","دکتر فرقانی","دکتر مقبل","دکتر جدید الاسلام","دکتر یوسفی نژاد"],["دکتر شیخ احمدی","دکتر محمدی","دکتر مظفری","دکتر رضایی","دکتر فرقانی","دکتر مقبل","دکتر شیخ الاسلامی","دکتر یوسفی نژاد"],["دکتر شیخ احمدی","دکتر محمدی","دکتر مظفری","دکتر رضایی","دکتر فرقانی","دکتر پرهیزکار","دکتر جدید الاسلام","دکتر یوسفی نژاد"],["دکتر شیخ احمدی","دکتر محمدی","دکتر مظفری","دکتر رضایی","دکتر فرقانی","دکتر پرهیزگار","دکتر جدید الاسلام","دکتر مولانایی"],["دکتر معتمدی","دکتر محمدی","دکتر مظفری","دکتر رضایی","","دکتر شیخ اسماعیلی","دکتر شیخ الاسلامی","دکتر مولانایی"],["دکتر فرشادی","دکتر محمدی","دکتر مظفری","دکتر شکوهی","دکتر حسن زاده","دکتر مقبل","دکتر شیخ الاسلامی","دکتر مولانایی"],["دکتر معتمدی","دکتر علایی","دکتر مظفری","دکتر شکوهی","دکتر حسن زاده","دکتر مقبل","دکتر جدید الاسلام","دکتر مولانایی"],["دکتر معتمدی","دکتر علایی","دکتر مظفری","دکتر شکوهی","دکتر حسن زاده","دکتر محمدی","دکتر شیخ الاسلامی","دکتر مولانایی"],["دکتر معتمدی","دکتر علایی","دکتر مظفری","دکتر شکوهی","دکتر حسن زاده","دکتر محمدی","دکتر جدید الاسلام","دکتر مولانایی"],["","دکتر علایی","دکتر فتاحی","دکتر شکوهی","دکتر حسن زاده","دکتر محمدی","دکتر شیخ الاسلامی","دکتر مولانایی"],["","دکتر علایی","دکتر فتاحی","دکتر شکوهی","دکتر حسن زاده","دکتر محمدی","دکتر شیخ الاسلامی","دکتر یوسفی نژاد"],["دکتر معتمدی","دکتر علایی","دکتر فتاحی","دکتر شکوهی","دکتر حسن زاده","دکتر محمدی","دکتر جدید الاسلام","دکتر یوسفی نژاد"],["دکتر معتمدی","دکتر علایی","دکتر فتاحی","دکتر شکوهی","دکتر حسن زاده","دکتر محمدی","دکتر جدید الاسلام","دکتر یوسفی نژاد"],["دکتر معتمدی","دکتر علایی","دکتر فتاحی","دکتر شکوهی","دکتر حسن زاده","دکتر محمدی","دکتر شیخ الاسلامی","دکتر یوسفی نژاد"],["دکتر معتمدی","دکتر علایی","دکتر فتاحی","دکتر شکوهی","دکتر حسن زاده","دکتر محمدی","دکتر جدید الاسلام","دکتر یوسفی نژاد"],["","دکتر علایی","دکتر فتاحی","دکتر شکوهی","دکتر حسن زاده","دکتر محمدی","دکتر شیخ الاسلامی","دکتر یوسفی نژاد"],["","دکتر علایی","دکتر فتاحی","دکتر شکوهی","دکتر حسن زاده","دکتر محمدی","دکتر شیخ الاسلامی","دکتر یوسفی نژاد"]]},"icu":["دکتر آریا سلامی","دکتر سعید رحیمی","دکتر آزاد فروزش","دکتر سعید رحیمی","دکتر پژمان نوری","دکتر آزاد فروزش","دکتر سعید رحیمی","دکتر شاهین حاتموند","دکتر آذین زارعی","دکتر شاهین حاتموند","دکتر آذین زارعی","دکتر شاهین حاتموند","دکتر آذین زارعی","دکتر شاهین حاتموند","دکتر آذین زارعی","دکتر شاهین حاتموند","دکتر آذین زارعی","دکتر پژمان نوری","دکتر سعید رحیمی","دکتر آزاد فروزش","دکتر آریا سلامی","دکتر آزاد فروزش","دکتر آریا سلامی","دکتر آزاد فروزش","دکتر سینا ثریا","دکتر آریا سلامی","دکتر پژمان نوری","دکتر سینا ثریا","دکتر آریا سلامی","دکتر سعید رحیمی"],"qods":["دکتر مدرس گرجی","دکتر مدرس گرجی","دکتر مدرس گرجی","دکتر مدرس گرجی","دکتر مدرس گرجی","دکتر سعیده سیفی","دکتر سعیده سیفی","دکتر سعیده سیفی","دکتر سعیده سیفی","دکتر سعیده سیفی","دکتر ژیلا شریفی","دکتر ژیلا شریفی","دکتر ژیلا شریفی","دکتر ژیلا شریفی","دکتر نعمت ا... نقشبندی","دکتر نعمت ا... نقشبندی","دکتر نعمت ا... نقشبندی","دکتر نعمت ا... نقشبندی","دکتر نعمت ا... نقشبندی","دکتر اردلان معمار","دکتر اردلان معمار","دکتر اردلان معمار","دکتر اردلان معمار","دکتر اردلان معمار","دکتر پرتوی","دکتر پرتوی","دکتر پرتوی","دکتر پرتوی","دکتر پرتوی","دکتر پرتوی"],"clinic":{"شنبه":{"am":[{"n":"دکتر وحید یوسفی نژاد","s":""},{"n":"دکتر نرمین باغی","s":""}],"pm":[{"n":"دکتر مظفری","s":"هماتولوژی و انکولوژی"},{"n":"دکتر پرهیزکار","s":"گوارش"},{"n":"دکتر عزت پناه","s":"غدد"},{"n":"دکتر شکوهی","s":"ریه"}]},"یکشنبه":{"am":[],"pm":[{"n":"دکتر شیخ اسماعیلی","s":"گوارش"},{"n":"دکتر فتحی زاده","s":"ریه"},{"n":"دکتر فرقانی","s":"نفرولوژی"},{"n":"دکتر خدایی","s":"گوارش"},{"n":"دکتر محمدی","s":"غدد"}]},"دوشنبه":{"am":[],"pm":[{"n":"دکتر مقیمی","s":"روماتولوژی"},{"n":"دکتر سید جلال الدین نقشبندی","s":"گوارش"},{"n":"دکتر ساعد","s":"غدد"},{"n":"دکتر حسن زاده","s":"نفرولوژی"}]},"سه‌شنبه":{"am":[{"n":"دکتر اردلان معمار","s":""}],"pm":[{"n":"دکتر قادری","s":"هماتولوژی و انکولوژی"},{"n":"دکتر حسنی","s":"ریه"},{"n":"دکتر فرشادی","s":"روماتولوژی"},{"n":"دکتر محمدی","s":"گوارش"}]},"چهارشنبه":{"am":[{"n":"دکتر وحید یوسفی نژاد","s":""},{"n":"دکتر باغی","s":""}],"pm":[{"n":"دکتر محمدی","s":"نفرولوژی"},{"n":"دکتر خدایی","s":"گوارش"},{"n":"دکتر علایی","s":"غدد"},{"n":"دکتر مقبل","s":"گوارش"},{"n":"دکتر فتاحی","s":"خون"},{"n":"دکتر سیگاری","s":"ریه"}]},"پنجشنبه":{"am":[{"n":"دکتر امیر شیخ الاسلامی","s":"دیابت"}],"pm":[]}},"edu":{"شنبه":{"report":["دکتر نقشبندی","دکتر مظفری","دکتر رضایی","دکتر علایی","دکتر معمار"],"rounds":"همه اساتید","cls":""},"یکشنبه":{"report":["دکتر انور محمدی","دکتر وحید یوسفی نژاد","دکتر حسنی","دکتر شیخ اسماعیلی","دکتر مقیمی","دکتر نصیری فر","دکتر شکوهی"],"rounds":"همه اساتید","cls":"کلاس مهارتهای عملی"},"دوشنبه":{"report":["دکتر قادری","دکتر امیر مولانایی","دکتر سیگاری","دکتر خدایی","دکتر ساعد","دکتر فرقانی"],"rounds":"همه اساتید","cls":""},"سه‌شنبه":{"report":"ژورنال کلاب","rounds":"همه اساتید","cls":"ژورنال کلاب"},"چهارشنبه":{"report":["دکتر شیخ احمدی","دکتر فتاحی","دکتر فتحی زاده","دکتر مقبل","دکتر حسن زاده","دکتر باغی","دکتر محمدی"],"rounds":"همه اساتید","cls":"PBL"},"پنجشنبه":{"report":null,"rounds":"همه اساتید","cls":"Text review"}},"rules":{"intro":"جهت اخذ پذیرش بیماران نیازمند خدمات فوق تخصصی در سنندج و شهرستان‌های تابعه استان کردستان لازم است سلسله مراتب ارجاع به شرح ذیل رعایت گردد:","items":["چنانچه مورد مشاوره توسط رشته‌های غیر از تخصص داخلی باشد لازم است ابتدا با متخصص داخلی آنکال آن مرکز مشاوره شده باشد و در صورت صلاحدید متخصص داخلی مرکز مربوطه، ایشان شخصاً با دستیار ارشد داخلی کشیک در مرکز پزشکی، آموزشی و درمانی توحید جهت اخذ پذیرش، هماهنگی لازم را انجام خواهد داد.","چنانچه مورد مشاوره توسط همکاران محترم متخصص داخلی سنندج و شهرستان‌های تابعه استان کردستان باشد لازم است متخصص داخلی مشاوره دهنده شخصاً با دستیار ارشد داخلی کشیک در مرکز پزشکی، آموزشی و درمانی توحید جهت اخذ پذیرش هماهنگی لازم را انجام دهد."]}};
+var MONTHS=["فروردین","اردیبهشت","خرداد","تیر","مرداد","شهریور","مهر","آبان","آذر","دی","بهمن","اسفند"];
+var WEEK=["شنبه","یکشنبه","دوشنبه","سه‌شنبه","چهارشنبه","پنجشنبه"];
+var JS_WD={6:"شنبه",0:"یکشنبه",1:"دوشنبه",2:"سه‌شنبه",3:"چهارشنبه",4:"پنجشنبه",5:"جمعه"};
+var MON=MONTHS[DATA.m-1]+" "+fa(DATA.y);
+
+var ICON={
+  home:'<path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 10v9.5h13V10"/><path d="M10 19.5v-5h4v5"/>',
+  day:'<rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/><circle cx="12" cy="15" r="1.4" fill="currentColor" stroke="none"/>',
+  edu:'<path d="M12 6.5C10 5 7 4.6 4 5v13c3-.4 6 0 8 1.5 2-1.5 5-1.9 8-1.5V5c-3-.4-6 0-8 1.5z"/><path d="M12 6.5v13"/>',
+  clinic:'<path d="M6 3.5v5.5a4 4 0 0 0 8 0V3.5"/><path d="M10 13v1.5a4.5 4.5 0 0 0 9 0V13"/><circle cx="19" cy="11" r="2"/>',
+  oncall:'<rect x="7" y="2.5" width="10" height="19" rx="2.6"/><path d="M10.5 18.5h3"/>',
+  icu:'<path d="M3 12h4l2.4-6 4.2 12 2.4-6H21"/>',
+  qods:'<path d="M5 8h13l-3-3"/><path d="M19 16H6l3 3"/>',
+  rules:'<path d="M12 3.2 19 6v5.4c0 4.6-3 7.6-7 9.4-4-1.8-7-4.8-7-9.4V6l7-2.8z"/><path d="M9 12l2.2 2.2L15.2 10"/>',
+  search:'<circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/>',
+  prev:'<path d="m9 6 6 6-6 6"/>',
+  next:'<path d="m15 6-6 6 6 6"/>',
+  about:'<circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.8v.1"/>',
+  mark:'<path d="M12 5v14M5 12h14"/>',
+  library:'<path d="M4.5 5v14M9 5v14"/><path d="m13.2 6.4 4.1-1.1 3 13.3-4.1 1.1z"/>',
+  form:'<rect x="5" y="3.5" width="14" height="17" rx="2.5"/><path d="M9 8.5h6M9 12.5h6M9 16.5h3"/>',
+  users:'<circle cx="9" cy="8.5" r="3"/><path d="M3.5 19c.5-3 2.8-4.8 5.5-4.8s5 1.8 5.5 4.8"/><circle cx="17" cy="9.5" r="2.4"/><path d="M16 14.4c2.6-.2 4.2 1.4 4.6 4"/>',
+  phone:'<path d="M6.5 3.5h3l1.4 4-2 1.3a10 10 0 0 0 4.3 4.3l1.3-2 4 1.4v3a2 2 0 0 1-2 2A14.5 14.5 0 0 1 4.5 5.500a2 2 0 0 1 2-2z"/>',
+  pin:'<path d="M12 21s6.5-5.6 6.5-11a6.5 6.5 0 0 0-13 0C5.5 15.400 12 21 12 21z"/><circle cx="12" cy="10" r="2.3"/>',
+  file:'<path d="M6.5 3.5h7L18 8v12a1 1 0 0 1-1 1H6.500a1 1 0 0 1-1-1V4.500a1 1 0 0 1 1-1z"/><path d="M13.500 3.500V8H18"/>',
+  bell:'<path d="M6 16.500V11a6 6 0 0 1 12 0v5.500l1.500 1.500h-15z"/><path d="M10 20.500a2 2 0 0 0 4 0"/>',
+  clock:'<circle cx="12" cy="12" r="8.500"/><path d="M12 7.500V12l3 2"/>',
+  star:'<path d="m12 4 2.400 5 5.500.8-4 3.900.9 5.500L12 16.600 7.200 19.200l.9-5.500-4-3.900L9.600 9z"/>'
+};
+function ic(n,s){s=s||20;return '<svg viewBox="0 0 24 24" width="'+s+'" height="'+s+'" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+ICON[n]+'</svg>'}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function fa(n){return String(n).replace(/\d/g,function(d){return "۰۱۲۳۴۵۶۷۸۹".charAt(d)})}
+function nkey(s){return String(s).replace(/[‌\s]+/g,"").replace(/ي/g,"ی").replace(/ك/g,"ک").replace(/[آأإ]/g,"ا").toLowerCase()}
+function $(s){return document.querySelector(s)}
+
+function todayJ(){
+  try{
+    var parts=new Intl.DateTimeFormat("fa-IR-u-nu-latn",{year:"numeric",month:"numeric",day:"numeric"}).formatToParts(new Date());
+    var o={};parts.forEach(function(p){if(p.type!=="literal")o[p.type]=parseInt(p.value,10)});
+    if(o.year&&o.month&&o.day)return {y:o.year,m:o.month,d:o.day,wd:JS_WD[new Date().getDay()]};
+  }catch(e){}
+  return null;
+}
+var TODAY=todayJ();
+var inMonth=!!(TODAY&&TODAY.y===DATA.y&&TODAY.m===DATA.m);
+var sel=inMonth?TODAY.d:1;
+var wdSel=null;
+var view="home";
+var app=$("#app");
+
+function dayRec(d){return DATA.days[d-1]||null}
+function dateLabel(d){var r=dayRec(d);return (r?r.w+" ":"")+fa(d)+" "+MON}
+function curWd(){if(wdSel)return wdSel;if(TODAY&&WEEK.indexOf(TODAY.wd)>-1)return TODAY.wd;return "شنبه"}
+function nm(s){return s?'<span class="nm">'+esc(s)+'</span>':'<span class="none">ثبت نشده</span>'}
+function blk(title,icon,inner){return '<section class="blk"><div class="bh"><span class="ico">'+ic(icon,19)+'</span><h3>'+esc(title)+'</h3></div><div class="bb">'+inner+'</div></section>'}
+function tr(time,label,html){return '<div class="tr"><div class="tm">'+time+'</div><div><div class="lb">'+esc(label)+'</div><div class="vl">'+html+'</div></div></div>'}
+function none(t){return '<div class="none" style="padding:8px 0">'+t+'</div>'}
+
+function eduBlock(w){
+  var e=DATA.edu[w];
+  if(!e)return blk("برنامه آموزشی","edu",none("برنامه‌ای برای این روز ثبت نشده است"));
+  var rep=Array.isArray(e.report)?e.report.map(nm).join(""):(e.report?esc(e.report):"—");
+  return blk("برنامه آموزشی","edu",
+    tr("۸ تا ۹","گزارش صبحگاهی",rep)+
+    tr("۹ تا ۱۲","راند درمانی، آموزشی و درمانگاه",esc(e.rounds||"—"))+
+    tr("۱۲ تا ۱۳","کلاس‌های آموزشی",esc(e.cls||"—")));
+}
+function who(list){return list.map(function(p){return '<span class="nm">'+esc(p.n)+'</span>'+(p.s?'<span class="sp">'+esc(p.s)+'</span>':'')}).join("")}
+function clinicBlock(w){
+  var c=DATA.clinic[w];
+  if(!c||(!c.am.length&&!c.pm.length))return blk("درمانگاه","clinic",none("درمانگاهی برای این روز ثبت نشده است"));
+  return blk("درمانگاه","clinic",
+    tr("۸ تا ۱۰","متخصص داخلی",c.am.length?who(c.am):"—")+
+    tr("۱۰ تا ۱۲","فوق تخصص داخلی",c.pm.length?who(c.pm):"—"));
+}
+function oncallGrid(d){
+  var r=DATA.oncall.rows[d-1];
+  if(!r)return none("برنامه این روز ثبت نشده است");
+  return '<div class="g2">'+DATA.oncall.specs.map(function(s,i){
+    return '<div class="cell"><div class="lb">'+esc(s)+'</div><div class="vl">'+(r[i]?esc(r[i]):'<span class="none">ثبت نشده</span>')+'</div></div>'}).join("")+'</div>';
+}
+function oncallBlock(d){return blk("آنکالی بخش‌ها","oncall",oncallGrid(d))}
+function oneBlock(title,icon,val){return blk(title,icon,'<div class="vl" style="padding:6px 0">'+(val?nm(val):'<span class="none">ثبت نشده</span>')+'</div>')}
+
+function stepper(){
+  var isT=inMonth&&sel===TODAY.d;
+  var side=isT?'<span class="chip">امروز</span>':(inMonth?'<button class="tdy" data-act="today">برگشت به امروز</button>':'');
+  return '<div class="stp"><button class="sb" data-act="prev" aria-label="روز قبل">'+ic("prev",20)+'</button><div class="sl"><b>'+esc(dateLabel(sel))+'</b>'+side+'</div><button class="sb" data-act="next" aria-label="روز بعد">'+ic("next",20)+'</button></div>';
+}
+function pills(items,cur){return '<div class="pills">'+items.map(function(p){return '<a class="pill'+(p[0]===cur?' on':'')+'" href="#/'+p[0]+'">'+p[1]+'</a>'}).join("")+'</div>'}
+function wdTabs(){
+  var w=curWd();
+  return '<div class="tabs">'+WEEK.map(function(k){return '<button class="tab'+(k===w?' on':'')+(TODAY&&k===TODAY.wd?' today':'')+'" data-act="wd" data-v="'+k+'">'+k+'</button>'}).join("")+'</div>';
+}
+function footer(){return '<footer>برنامه گروه آموزشی داخلی · '+MON+'</footer>'}
+
+var EDU_PILLS=[["edu","برنامه آموزشی"],["clinic","درمانگاه"]];
+var DUTY_PILLS=[["oncall","آنکالی بخش‌ها"],["icu","کشیک ICU"],["qods","مشاوره قدس"],["rules","قوانین ارجاع"]];
+
+function safeHref(u){return /^(#|https?:\/\/|files\/)/.test(u)?u:null}
+function bodyHTML(it){
+  var h="";
+  if(it.d)h+='<p>'+esc(it.d)+'</p>';
+  if(it.meta){h+='<table class="meta">';it.meta.forEach(function(m){h+='<tr><td>'+esc(m[0])+'</td><td>'+esc(m[1])+'</td></tr>'});h+='</table>'}
+  if(it.link){var u=safeHref(it.link.url||"");if(u)h+='<div class="btnrow"><a class="btn" href="'+esc(u)+'"'+(u.charAt(0)==="#"?'':' target="_blank" rel="noopener"')+'>'+esc(it.link.text||"مشاهده")+'</a></div>'}
+  return h;
+}
+function itemHTML(it){return '<details><summary><span>'+esc(it.t)+'</span></summary><div class="body">'+bodyHTML(it)+'</div></details>'}
+function findPage(id){var p=null;(CONFIG.pages||[]).forEach(function(x){if(x.id===id)p=x});return p}
+var pageId=null;
+function pageView(id){
+  var p=findPage(id);
+  if(!p)return '<div class="empty">این بخش پیدا نشد</div>'+footer();
+  return '<div class="ph"><span class="ico big">'+ic(p.icon||"file",24)+'</span><div><h2>'+esc(p.title)+'</h2><p>'+esc(p.desc||"")+'</p></div></div>'+(p.items||[]).map(itemHTML).join("")+footer();
+}
+
+/* ---------- views ---------- */
+function summary(){
+  var d=sel,r=dayRec(d),w=r?r.w:"",e=DATA.edu[w];
+  var idx=DATA.oncall.specs.indexOf("داخلی"),oc=DATA.oncall.rows[d-1];
+  var rows=[["icu","کشیک ICU",DATA.icu[d-1]],["oncall","آنکال داخلی",oc?oc[idx]:""],["qods","مشاوره بیمارستان قدس",DATA.qods[d-1]],["edu","کلاس آموزشی امروز",e?(e.cls||"—"):"—"]];
+  return '<section class="blk"><div class="bb">'+rows.map(function(x){
+    return '<div class="sr"><span class="ico s">'+ic(x[0],17)+'</span><div><div class="lb">'+x[1]+'</div><div class="vl">'+(x[2]?esc(x[2]):'<span class="none">ثبت نشده</span>')+'</div></div></div>'}).join("")+
+    '<div class="btnrow"><a class="btn" href="#/day">جزئیات کامل امروز</a></div></div></section>';
+}
+function home(){
+  var h="";
+  if(inMonth){h+='<h2>امروز · '+esc(dateLabel(TODAY.d))+'</h2>'+summary()}
+  else if(TODAY){h+='<div class="note">برنامه ثبت‌شده مربوط به «'+MON+'» است و تاریخ امروز در آن نیست. برنامه ماه جدید هنوز بارگذاری نشده است.</div>'}
+  var tiles=[["#/edu","edu","برنامه آموزشی","گزارش صبحگاهی، راند، کلاس"],["#/clinic","clinic","درمانگاه","متخصص و فوق‌تخصص"],
+    ["#/oncall","oncall","آنکالی بخش‌ها","۸ تخصص، روزانه"],["#/icu","icu","کشیک ICU","رزیدنت‌های مقیم"],
+    ["#/qods","qods","مشاوره قدس","متخصص داخلی"],["#/rules","rules","قوانین ارجاع","اخذ پذیرش بیماران"]];
+  (CONFIG.pages||[]).forEach(function(p){tiles.push(["#/p/"+encodeURIComponent(p.id),p.icon||"file",p.title,p.desc||""])});
+  h+='<h2>بخش‌ها</h2><div class="grid">'+tiles.map(function(t){
+    return '<a class="tile" href="'+t[0]+'"><span class="ico big">'+ic(t[1],24)+'</span><div><b>'+esc(t[2])+'</b><small>'+esc(t[3])+'</small></div></a>'}).join("")+'</div>';
+  return h+footer();
+}
+function dayView(){
+  var r=dayRec(sel),w=r?r.w:"";
+  return stepper()+eduBlock(w)+clinicBlock(w)+oncallBlock(sel)+oneBlock("کشیک ICU","icu",DATA.icu[sel-1])+oneBlock("مشاوره بیمارستان قدس","qods",DATA.qods[sel-1])+footer();
+}
+function eduView(){return pills(EDU_PILLS,"edu")+wdTabs()+eduBlock(curWd())+footer()}
+function clinicView(){return pills(EDU_PILLS,"clinic")+wdTabs()+clinicBlock(curWd())+footer()}
+function monthTable(){
+  var h='<div class="tw"><table><thead><tr><th>روز</th>'+DATA.oncall.specs.map(function(s){return '<th>'+esc(s)+'</th>'}).join("")+'</tr></thead><tbody>';
+  DATA.oncall.rows.forEach(function(r,i){
+    var d=i+1,isT=inMonth&&d===TODAY.d;
+    h+='<tr'+(isT?' class="now"':'')+'><td>'+esc(DATA.days[i].w)+' '+fa(d)+'</td>'+r.map(function(n){return '<td>'+(n?esc(n):'—')+'</td>'}).join("")+'</tr>';
+  });
+  return h+'</tbody></table></div>';
+}
+function oncallView(){
+  return pills(DUTY_PILLS,"oncall")+stepper()+oncallBlock(sel)+'<details><summary>جدول کامل ماه</summary>'+monthTable()+'</details>'+footer();
+}
+function icuList(f){
+  var k=nkey(f||""),h="";
+  DATA.icu.forEach(function(n,i){
+    if(k&&nkey(n).indexOf(k)<0)return;
+    var d=i+1,isT=inMonth&&d===TODAY.d;
+    h+='<div class="ln'+(isT?' now':'')+'"><span class="dt">'+fa(d)+' '+MONTHS[DATA.m-1]+'</span><span class="wk">'+esc(DATA.days[i].w)+'</span><span>'+(n?esc(n):'<span class="none">ثبت نشده</span>')+(isT?' <span class="chip">امروز</span>':'')+'</span></div>';
+  });
+  return h||'<div class="empty">موردی پیدا نشد</div>';
+}
+function icuView(){
+  return pills(DUTY_PILLS,"icu")+'<input class="flt" id="icuF" type="search" placeholder="نام رزیدنت را جست‌وجو کنید…" autocomplete="off"><section class="blk" id="icuL">'+icuList("")+'</section>'+footer();
+}
+function qodsView(){
+  var out=[],cur=null;
+  DATA.qods.forEach(function(n,i){var d=i+1;if(cur&&cur.n===n){cur.b=d}else{cur={n:n,a:d,b:d};out.push(cur)}});
+  var h=out.map(function(g){
+    var now=inMonth&&TODAY.d>=g.a&&TODAY.d<=g.b;
+    var lab=g.a===g.b?fa(g.a)+' '+MONTHS[DATA.m-1]:fa(g.a)+' تا '+fa(g.b)+' '+MONTHS[DATA.m-1];
+    return '<div class="rg'+(now?' now':'')+'"><div><div class="vl">'+(g.n?esc(g.n):'ثبت نشده')+'</div><div class="lb">'+lab+'</div></div>'+(now?'<span class="chip">هم‌اکنون</span>':'')+'</div>';
+  }).join("");
+  return pills(DUTY_PILLS,"qods")+'<div class="lb" style="padding-top:10px">مشاوره متخصصین داخلی در بیمارستان قدس</div><section class="blk">'+h+'</section>'+footer();
+}
+function rulesView(){
+  var R=DATA.rules;
+  return pills(DUTY_PILLS,"rules")+blk("قوانین ارجاع و اخذ پذیرش","rules",'<p style="margin:6px 0 8px;font-size:14.5px">'+esc(R.intro)+'</p>'+R.items.map(function(t,i){return '<div class="rule"><span class="no">'+fa(i+1)+'</span><div>'+esc(t)+'</div></div>'}).join(""))+footer();
+}
+function aboutView(){
+  return '<h2>درباره کاتالوگ</h2><section class="blk"><div class="bb"><p style="margin:8px 0">این کاتالوگ برای دسترسی سریع اکسترن‌ها و اینترن‌ها به برنامه‌های آموزشی، درمانگاه و کشیک گروه آموزشی داخلی طراحی شده است.</p><table class="meta" style="min-width:0"><tr><td>منبع اطلاعات</td><td>برنامه‌های گروه آموزشی داخلی، دانشکده پزشکی</td></tr><tr><td>دوره</td><td>'+MON+'</td></tr><tr><td>طراحی و پشتیبانی</td><td>'+esc(CONFIG.author)+'</td></tr></table></div></section>'+footer();
+}
+
+/* ---------- search ---------- */
+function compress(a){
+  a=a.slice().sort(function(x,y){return x-y});
+  var out=[],i=0;
+  while(i<a.length){var j=i;while(j+1<a.length&&a[j+1]===a[j]+1)j++;
+    out.push(j>i+1?fa(a[i])+" تا "+fa(a[j]):(j===i+1?fa(a[i])+" و "+fa(a[j]):fa(a[i])));i=j+1}
+  return out.length>1?out.slice(0,-1).join("، ")+" و "+out[out.length-1]:(out[0]||"");
+}
+function searchView(q){
+  var k=nkey(q),res={},order=[];
+  function add(icon,label,name,when,isDay){
+    var key=label+"|"+name;
+    if(!res[key]){res[key]={icon:icon,label:label,name:name,days:[],wk:[]};order.push(key)}
+    (isDay?res[key].days:res[key].wk).push(when);
+  }
+  DATA.oncall.rows.forEach(function(r,i){r.forEach(function(n,j){if(n&&nkey(n).indexOf(k)>-1)add("oncall","آنکال "+DATA.oncall.specs[j],n,i+1,true)})});
+  DATA.icu.forEach(function(n,i){if(n&&nkey(n).indexOf(k)>-1)add("icu","کشیک ICU",n,i+1,true)});
+  DATA.qods.forEach(function(n,i){if(n&&nkey(n).indexOf(k)>-1)add("qods","مشاوره بیمارستان قدس",n,i+1,true)});
+  WEEK.forEach(function(w){
+    var c=DATA.clinic[w],e=DATA.edu[w];
+    if(c){c.am.forEach(function(p){if(nkey(p.n).indexOf(k)>-1)add("clinic","درمانگاه (۸ تا ۱۰)",p.n,w,false)});
+          c.pm.forEach(function(p){if(nkey(p.n).indexOf(k)>-1)add("clinic","درمانگاه (۱۰ تا ۱۲)"+(p.s?" · "+p.s:""),p.n,w,false)})}
+    if(e&&Array.isArray(e.report))e.report.forEach(function(n){if(nkey(n).indexOf(k)>-1)add("edu","گزارش صبحگاهی",n,w,false)});
+  });
+  var pr=[];
+  (CONFIG.pages||[]).forEach(function(p){(p.items||[]).forEach(function(it){
+    var blob=nkey(it.t+" "+(it.d||"")+" "+(it.meta||[]).map(function(m){return m.join(" ")}).join(" "));
+    if(blob.indexOf(k)>-1)pr.push({p:p,it:it});
+  })});
+  if(!order.length&&!pr.length)return '<div class="empty">موردی برای «'+esc(q)+'» پیدا نشد</div>';
+  var pageCards=pr.slice(0,20).map(function(x){
+    return '<a class="blk res" href="#/p/'+encodeURIComponent(x.p.id)+'"><div class="bh"><span class="ico">'+ic(x.p.icon||"file",19)+'</span><h3>'+esc(x.p.title)+'</h3></div><div class="bb"><span class="nm">'+esc(x.it.t)+'</span></div></a>';
+  }).join("");
+  return '<h2>نتایج جست‌وجو</h2>'+pageCards+order.slice(0,40).map(function(key){
+    var r=res[key],when=r.days.length?compress(r.days)+" "+MONTHS[DATA.m-1]:r.wk.join("، ")+" (هر هفته)";
+    return '<section class="blk res"><div class="bh"><span class="ico">'+ic(r.icon,19)+'</span><h3>'+esc(r.label)+'</h3></div><div class="bb"><span class="nm">'+esc(r.name)+'</span><div class="wh">'+when+'</div></div></section>';
+  }).join("");
+}
+
+/* ---------- router ---------- */
+var NAV=[["home","#/","home","خانه"],["day","#/day","day","روزانه"],["edu","#/edu","edu","آموزشی"],["duty","#/oncall","oncall","کشیک‌ها"],["about","#/about","about","درباره"]];
+var NAVKEY={page:"home",home:"home",day:"day",edu:"edu",clinic:"edu",oncall:"duty",icu:"duty",qods:"duty",rules:"duty",about:"about"};
+function parseView(){var h=(location.hash||"#/").replace(/^#\/?/,"");if(h.indexOf("p/")===0){pageId=decodeURIComponent(h.slice(2));return "page"}return NAVKEY[h]?h:"home"}
+function render(){
+  var q=$("#q").value.trim();
+  var searching=view==="home"&&q.length>=2;
+  var map={page:function(){return pageView(pageId)},home:home,day:dayView,edu:eduView,clinic:clinicView,oncall:oncallView,icu:icuView,qods:qodsView,rules:rulesView,about:aboutView};
+  app.innerHTML=searching?searchView(q):map[view]();
+  $("#searchBox").style.display=view==="home"?"block":"none";
+  var nk=NAVKEY[view];
+  Array.prototype.forEach.call(document.querySelectorAll("nav a"),function(a){a.classList.toggle("on",a.getAttribute("data-r")===nk)});
+}
+function init(){
+  $("#ttl").textContent=CONFIG.title;$("#sub").textContent=CONFIG.subtitle;document.title=CONFIG.title;
+  $(".mark").innerHTML=ic("mark",22);
+  $(".si").innerHTML=ic("search",19);
+  $("#nav").innerHTML=NAV.map(function(n){return '<a href="'+n[1]+'" data-r="'+n[0]+'"><span class="ni">'+ic(n[2],22)+'</span>'+n[3]+'</a>'}).join("");
+  if(TODAY){$("#dchip").innerHTML=ic("day",15)+' '+esc(TODAY.wd+" "+fa(TODAY.d)+" "+MONTHS[TODAY.m-1]+" "+fa(TODAY.y))}else{$("#dchip").style.display="none"}
+  view=parseView();render();
+}
+window.addEventListener("hashchange",function(){$("#q").value="";view=parseView();render();window.scrollTo(0,0)});
+$("#q").addEventListener("input",function(){render()});
+document.addEventListener("input",function(e){if(e.target&&e.target.id==="icuF"){$("#icuL").innerHTML=icuList(e.target.value)}});
+document.addEventListener("click",function(e){
+  var b=e.target.closest?e.target.closest("[data-act]"):null;if(!b)return;
+  var a=b.getAttribute("data-act"),n=DATA.days.length;
+  if(a==="prev")sel=Math.max(1,sel-1);
+  else if(a==="next")sel=Math.min(n,sel+1);
+  else if(a==="today"&&inMonth)sel=TODAY.d;
+  else if(a==="wd")wdSel=b.getAttribute("data-v");
+  render();
+});
+init();
+</script>
+</body>
+</html>
